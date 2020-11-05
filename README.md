@@ -7,7 +7,7 @@ A [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) template for py
 In order to start a new project, [install Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html) and run the following command:
 
 ```bash
-$ cookiecutter
+$ cookiecutter https://github.com/ferreteleco/cookie_python.git
 ```
 
 ## Variables
