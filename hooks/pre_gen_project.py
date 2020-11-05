@@ -12,7 +12,7 @@ def validate_project_slug():
     project_slug = "{{ cookiecutter.project_slug }}"
 
     if not re.match(MODULE_REGEX, project_slug):
-        print("ERROR: %s is not a valid Python module name!" % repo_name)
+        print("ERROR: %s is not a valid Python module name!" % project_slug)
 
         # exits with status 1 to indicate failure
         sys.exit(1)
