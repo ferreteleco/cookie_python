@@ -22,4 +22,4 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG, format="%(message)s")
     LOG = logging.getLogger("pre_gen_project")
 
-    validate_repo_name()
+    validate_project_slug()
