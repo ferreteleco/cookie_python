@@ -25,7 +25,7 @@ def remove_pyproject_file():
         path.unlink()
 
 
-def remove_vscode_project_file():
+def remove_vscode_project_files():
 
     vscode_project = {{cookiecutter.vscode_project}}
 
@@ -56,6 +56,6 @@ if __name__ == "__main__":
 
     remove_pyenv_version_file()
     remove_pyproject_file()
-    remove_vscode_tasks_file()
+    remove_vscode_project_files()
     set_up_license()
     clean()
