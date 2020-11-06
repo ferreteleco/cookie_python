@@ -1,3 +1,4 @@
+from os import listdir
 from os.path import join
 from pathlib import Path
 import shutil
@@ -29,10 +30,15 @@ def remove_vscode_project_files():
 
     vscode_project = {{cookiecutter.vscode_project}}
 
-    if vscode_project == False:
+    if vscode_project == True:
+        LOG.info("Generating .vscode folder (VSCode) with default tasks.json ...")
+        vscode_files = join("_", "vscode")
+
+        for file_or_folder in listdir(vscode_files):
+        shutil.move(join(project_folder, file_or_folder), '.vscode')
+
+    else:
         LOG.info("Skipping .vscode file generation (VSCode) ...")
-        path = "./.vscode"
-        shutil.rmtree(path)
 
 
 def set_up_license():
