@@ -38,6 +38,7 @@ def remove_vscode_project_files():
         vscode_files = join("_", "vscode")
 
         for file_or_folder in listdir(vscode_files):
+            os.makedirs(".vscode", exist_ok=True)
             shutil.move(
                 join(vscode_files, file_or_folder), join(".vscode", file_or_folder)
             )
