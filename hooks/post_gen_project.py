@@ -14,7 +14,10 @@ def remove_pyenv_version_file():
         LOG.info("Skipping .python-version file generation (pyenv) ...")
         path = Path("./.python-version")
         path.unlink()
+
+
 """Post-generate hook for cookiecutter."""
+
 
 def remove_pyproject_file():
 
@@ -35,7 +38,7 @@ def remove_vscode_project_files():
         vscode_files = join("_", "vscode")
 
         for file_or_folder in listdir(vscode_files):
-        shutil.move(join(project_folder, file_or_folder), '.vscode')
+            shutil.move(join(project_folder, file_or_folder), ".vscode")
 
     else:
         LOG.info("Skipping .vscode file generation (VSCode) ...")
