@@ -38,7 +38,9 @@ def remove_vscode_project_files():
         vscode_files = join("_", "vscode")
 
         for file_or_folder in listdir(vscode_files):
-            shutil.move(join(vscode_files, file_or_folder), ".vscode")
+            shutil.move(
+                join(vscode_files, file_or_folder), join(".vscode", file_or_folder)
+            )
 
     else:
         LOG.info("Skipping .vscode file generation (VSCode) ...")
