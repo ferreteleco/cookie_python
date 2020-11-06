@@ -14,7 +14,7 @@ def remove_pyenv_version_file():
         LOG.info("Skipping .python-version file generation (pyenv) ...")
         path = Path("./.python-version")
         path.unlink()
-
+"""Post-generate hook for cookiecutter."""
 
 def remove_pyproject_file():
 

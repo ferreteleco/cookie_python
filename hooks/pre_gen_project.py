@@ -1,3 +1,5 @@
+"""Pre-generate hook for cookiecutter."""
+
 import logging
 import re
 import sys
